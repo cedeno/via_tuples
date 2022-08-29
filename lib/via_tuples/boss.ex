@@ -8,7 +8,7 @@ defmodule ViaTuples.Boss do
   @impl GenServer
   def init(_) do
     # start up the children
-    Enum.each(1..1, fn id ->
+    Enum.each(1..3, fn id ->
       {:ok, pid} = ViaTuples.Worker.start_link(id)
       IO.puts("started child #{id}, pid=#{inspect pid}")
     end)
