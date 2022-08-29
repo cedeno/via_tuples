@@ -11,7 +11,7 @@ defmodule ViaTuples.Application do
       # Starts a worker by calling: ViaTuples.Worker.start_link(arg)
       # {ViaTuples.Worker, arg}
       {ViaTuples.ProcessRegistry, nil},
-      ViaTuples.Worker,
+      {ViaTuples.Boss, nil},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
